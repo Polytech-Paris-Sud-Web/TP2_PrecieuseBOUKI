@@ -9,8 +9,9 @@ import {Author} from "./author.model";
   providedIn: 'root'
 })
 export class ArticleService {
+  private static readonly baseurl: string;
+  private  baseurl = "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2_PrecieuseBOUKI/"; //`${baseurl}articles...`
 
-  private static readonly baseurl : string  = "http://"; //puis remplacer par `${baseurl}articles...`
 
   constructor(private httpClient : HttpClient) {
 }
@@ -21,7 +22,7 @@ export class ArticleService {
    public getArticle(id:string): Observable<Article> {
     return this.httpClient.get<Article>("http://localhost:3000/articles/" + id);
   }
-  //Delete service wich permit to remove an Article
+
   public deleteArticle(id: string) {
       return this.httpClient.delete("http://localhost:3000/articles/"+id);
   }
