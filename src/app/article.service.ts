@@ -9,30 +9,27 @@ import {Author} from "./author.model";
   providedIn: 'root'
 })
 export class ArticleService {
-  private static readonly baseurl: string;
-  private  baseurl = "https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2_PrecieuseBOUKI/"; //`${baseurl}articles...`
-
 
   constructor(private httpClient : HttpClient) {
 }
   public getArticles(): Observable<Article[]> {
-    return this.httpClient.get<Article[]>("http://localhost:3000/articles");
+    return this.httpClient.get<Article[]>("https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2_PrecieuseBOUKI/articles");
 }
 
    public getArticle(id:string): Observable<Article> {
-    return this.httpClient.get<Article>("http://localhost:3000/articles/" + id);
+    return this.httpClient.get<Article>("https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2_PrecieuseBOUKI/articles/" + id);
   }
 
   public deleteArticle(id: string) {
-      return this.httpClient.delete("http://localhost:3000/articles/"+id);
+      return this.httpClient.delete("https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2_PrecieuseBOUKI/articles/"+id);
   }
 
   public createArticle(article : createArticle){
-    return this.httpClient.post<createArticle[]>("http://localhost:3000/articles",article);
+    return this.httpClient.post<createArticle[]>("https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2_PrecieuseBOUKI/articles",article);
   }
 
   public getAuthor(name:string): Observable<Author> {
-    return this.httpClient.get<Author>("http://localhost:3000/authors/+"+name);
+    return this.httpClient.get<Author>("https://my-json-server.typicode.com/Polytech-Paris-Sud-Web/TP2_PrecieuseBOUKI/authors/+"+name);
   }
 
 
