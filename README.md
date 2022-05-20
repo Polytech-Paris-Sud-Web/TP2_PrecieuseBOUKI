@@ -1,4 +1,4 @@
-J'ai été aidé par Sébastien Léonce et Silvain Théréné.
+J'ai été aidé par Sébastien Léonce, Silvain Théréné, et par Léonid Shurygin.
 
 # Angular
 
