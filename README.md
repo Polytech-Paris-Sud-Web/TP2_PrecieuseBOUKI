@@ -1,4 +1,4 @@
-J'ai été aidé par Sébastien.
+J'ai été aidé par Sébastien Léonce et Silvain Théréné.
 
 # Angular
 
